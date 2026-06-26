@@ -28,7 +28,7 @@
     { href: "about.html", label: "About" },
   ];
 
-  const GAZVA_WEBSITE_URL = "https://www.gazva.com";
+  const GAZVA_WEBSITE_URL = "#";
 
   // Pages inside /pages/ (e.g. article templates) need a "../" prefix on every
   // site-relative link. We detect this from a data attribute on <body> so the
@@ -174,8 +174,8 @@ const LOGO_HTML = `
     <!-- Bottom bar -->
     <div class="footer__bottom">
       <div class="footer__bottom-inner">
-        <span>&copy; <span id="footerYear">${new Date().getFullYear()}</span> Gazva Insights. All rights reserved.</span>
-        <span>Powered by <a href="${GAZVA_WEBSITE_URL}" target="_blank" rel="noopener" style="color:#9FC1AC;">Gazva Media</a></span>
+        <span>&copy; <span id="footerYear">${new Date().getFullYear()}</span> Gazva Insight. All rights reserved.</span>
+        <span>Powered by <span style="color:#9FC1AC;">Gazva Media</span></span>
       </div>
     </div>`;
 
