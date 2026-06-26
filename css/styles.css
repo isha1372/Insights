@@ -150,20 +150,32 @@ p { margin: 0; }
 .btn-primary {
   background: linear-gradient(135deg, var(--leaf), var(--teal));
   color: #fff;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: opacity 0.15s var(--ease), transform 0.15s var(--ease);
 }
 .btn-primary:hover {
-  background: var(--leaf);
+  opacity: 0.9;
   transform: translateY(-1px);
-  box-shadow: var(--TEAL);
 }
 .btn-outline {
   background: transparent;
-  border-color: var(--line-strong);
-  color: var(--linear-gradient(135deg, var(--leaf), var(--teal)));
+  border: 1px solid var(--teal);
+  border-radius: var(--radius-sm);
+  color: var(--teal);
 }
 .btn-outline:hover {
-  border-color: var(--leaf);
-  color: var(--linear-gradient(135deg, var(--leaf), var(--teal)));
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border-color: var(--teal);
 }
 .btn-block { width: 100%; }
 
@@ -1399,4 +1411,60 @@ a.cic-value:hover { color: var(--teal); }
 
 .cic-icon {
   transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   HOME PAGE — mobile card size fix
+   ========================================================================== */
+@media (max-width: 560px) {
+
+  /* ── Mosaic cards ── */
+  .mosaic {
+    gap: 12px;
+  }
+
+  /* shorter images on all mosaic cards */
+  .mosaic .card__media {
+    aspect-ratio: 16 / 7;
+  }
+
+  /* lead card slightly taller than others */
+  .mosaic .card--lead .card__media {
+    aspect-ratio: 16 / 8;
+  }
+
+  /* smaller title on lead card */
+  .mosaic .card--lead .card__title {
+    font-size: 1.05rem;
+  }
+
+  /* hide excerpts — biggest cause of tall cards */
+  .mosaic .card__excerpt {
+    display: none;
+  }
+
+  /* hide cards 5 and beyond — too many on one screen */
+  .mosaic .card:nth-child(n+5) {
+    display: none;
+  }
+
+  /* tighter card body padding */
+  .mosaic .card__body {
+    padding: 12px 14px 14px;
+    gap: 6px;
+  }
+
+  /* ── Post grid cards ── */
+  .post-grid .card__media {
+    aspect-ratio: 16 / 7;
+  }
+
+  .post-grid .card__excerpt {
+    display: none;
+  }
+
+  .post-grid .card__body {
+    padding: 12px 14px 14px;
+    gap: 6px;
+  }
 }
