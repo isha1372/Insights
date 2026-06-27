@@ -1,7 +1,6 @@
 /* ==========================================================================
    GAZVA INSIGHTS — form.js
-   Connects any form on the site to Web3Forms (https://web3forms.com).
-   Replace WEB3FORMS_ACCESS_KEY below with your own access key.
+   web3form ACCESS KEY
    ========================================================================== */
 
 (function () {

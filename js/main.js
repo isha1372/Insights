@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ─── Load More ─────────────────────────────────────────── */
 /*
-  Matches your HTML:
+  Matches HTML:
     grid  →  [data-load-more-grid]
     btn   →  [data-load-more-btn]
   Uses the native `hidden` attribute — simple and reliable.
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Run load more FIRST — independent of everything else
   initLoadMore();
 
-  // Then run shared components safely
+  //  run shared components safely
   try {
     const page = document.body.getAttribute("data-page") || "";
     if (typeof mountSharedComponents === "function") mountSharedComponents(page);

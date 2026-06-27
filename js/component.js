@@ -1,7 +1,6 @@
 /* ==========================================================================
    GAZVA INSIGHTS — component.js
-   Shared navbar + footer markup, injected into every page.
-   Keeping these in one place means editing the menu once updates every page.
+   Shared navbar + footer markup (ALL PAGES)
    ========================================================================== */
 
 (function () {
@@ -30,9 +29,8 @@
 
   const GAZVA_WEBSITE_URL = "#";
 
-  // Pages inside /pages/ (e.g. article templates) need a "../" prefix on every
-  // site-relative link. We detect this from a data attribute on <body> so the
-  // same component script works at any folder depth.
+  //BASE PATH
+  
   function getBasePath() {
     return document.body.getAttribute("data-base-path") || "";
   }
