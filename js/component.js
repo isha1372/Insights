@@ -69,7 +69,7 @@ const LOGO_HTML = `
             style="border-radius:10px; object-fit:cover;"
           />
         </span>
-          <span class="navbar__name">Gazva <span>Insights</span></span>
+          <span class="navbar__name">Gazva <span>Insight</span></span>
         </a>
         <ul class="navbar__links" id="navbarLinks">
           ${NAV_LINKS.map(
