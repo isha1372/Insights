@@ -8,20 +8,25 @@
 
   const NAV_LINKS = [
     { href: "index.html", label: "Home" },
-    { href: "quran.html", label: "Quran" },
-    { href: "fiqh.html", label: "Fiqh" },
-    { href: "thareekh.html", label: "Thareekh" },
-    { href: "general.html", label: "General" },
+    { href: "tadabbur.html", label: "Tadabbur" },
+    { href: "ahkaam.html", label: "Ahkaam" },
+    { href: "siyar.html", label: "Siyar" },
+     { href: "reflection.html", label: "Reflection" },
+    { href: "global affairs.html", label: "Global Affairs" },
+    { href: "bookshelf.html", label: "Bookshelf" },
+    { href: "meetthescholar.html", label: "Meet the Scholar" },
     { href: "kurippathukal.html", label: "Kurippathukal" },
     { href: "contact.html", label: "Contact" },
   ];
 
   const FOOTER_QUICKLINKS = [
     { href: "index.html", label: "Home" },
-    { href: "quran.html", label: "Quran" },
-    { href: "fiqh.html", label: "Fiqh" },
-    { href: "thareekh.html", label: "Thareekh" },
-    { href: "general.html", label: "General" },
+    { href: "tadabbur.html", label: "Tadabbur" },
+    { href: "ahkaam.html", label: "Ahkaam" },
+    { href: "reflection.html", label: "Reflection" },
+    { href: "global affairs.html", label: "Global Affairs" },
+    { href: "bookshelf.html", label: "Bookshelf" },
+    { href: "meetthescholar.html", label: "Meet the Scholar" },
     { href: "kurippathukal.html", label: "Kurippathukal" },
     { href: "contact.html", label: "Contact" },
     { href: "about.html", label: "About" },

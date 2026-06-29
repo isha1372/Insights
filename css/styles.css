@@ -43,10 +43,13 @@
   --line-strong:    #C8D4D0;      /* hover / emphasis border */
 
   /* ── Category wayfinding ── */
-  --cat-quran:        #1A7A6E;    /* deep teal */
-  --cat-fiqh:         #2E9E5B;    /* forest green */
-  --cat-thareekh:     #1C6B9A;    /* ocean blue */
-  --cat-general:      #4A4A4A;    /* ink soft */
+  --cat-tadabbur:        #1A7A6E;    /* deep teal */
+  --cat-ahkaam:         #2E9E5B;    /* forest green */
+  --cat-siyar:     #1C6B9A;    /* ocean blue */
+  --cat-globalaffairs:      #4A4A4A;    /* ink soft */
+   --cat-meetthescholar:      #4A4A4A;    /* ink soft */
+    --cat-reflection:      #4A4A4A;    /* ink soft */
+     --cat-:      #4A4A4A;    /* ink soft */
   --cat-kurippathukal:#5CC48A;    /* mint */
 
   /* ── Type ── */
@@ -186,7 +189,7 @@ p { margin: 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(224, 242, 240, 0.96);
+  background: rgba(248,250,251,.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #9FD4CC;
 }
@@ -1438,13 +1441,19 @@ a.cic-value:hover { color: var(--teal); }
     font-size: 1.05rem;
   }
 
-  /* hide excerpts — biggest cause of tall cards */
-  .mosaic .card__excerpt {
-    display: none;
-  }
+.mosaic .card__excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* Show only 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-  /* hide cards 5 and beyond — too many on one screen */
-  .mosaic .card:nth-child(n+5) {
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+  /* hide cards 9 and beyond — too many on one screen */
+  .mosaic .card:nth-child(n+9) {
     display: none;
   }
 
@@ -1459,9 +1468,6 @@ a.cic-value:hover { color: var(--teal); }
     aspect-ratio: 16 / 7;
   }
 
-  .post-grid .card__excerpt {
-    display: none;
-  }
 
   .post-grid .card__body {
     padding: 12px 14px 14px;
