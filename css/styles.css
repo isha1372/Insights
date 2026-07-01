@@ -5,52 +5,49 @@
 
 :root {
   /* ── Core surfaces ── */
-  --paper:          #F5F5F5;      /* off-white page background */
-  --paper-raised:   #FFFFFF;      /* card / panel surfaces */
-  --ink:            #111111;      /* headings, strong text */
-  --ink-soft:       #4A4A4A;      /* body text, descriptions */
-  --ink-muted:      #888888;      /* meta, dates, captions */
+  --paper:          #F7FAF7;
+  --paper-raised:   #FFFFFF;
+  --ink:            #111111;
+  --ink-soft:       #4A4A4A;
+  --ink-muted:      #888888;
 
-  /* ── Brand green (primary) ── */
-  --leaf:           #2E9E5B;      /* Forest Green — buttons, active states */
-  --leaf-dark:      #1F7A42;
-  --primary:        #6eb84f;      /* primary color */
-    --primary2 :      #05697a;      /* secondary color */
-  --leaf-light:     #E6F7ED;      /* green tint surfaces */
+  /* ── Brand green (primary) — sampled from logo wordmark start ── */
+  --leaf:           #3FA34D;
+  --leaf-dark:      #2D7A3A;
+  --leaf-light:     #E8F6EC;
 
-  /* ── Brand teal (secondary) ── */
-  --teal:           #1A7A6E;      /* Deep Teal — secondary actions */
-  --teal-dark:      #125A52;      /* hover on teal, footer headings */
+  /* ── Brand teal (secondary) — sampled from logo mid-gradient ── */
+  --teal:           #1B7A6E;
+  --teal-dark:      #0F5249;
+  --teal-light:     #DEF1ED;
 
-  --teal-light:     #E0F2F0;      /* teal tint surfaces */
-
-  /* ── Ocean blue (accent) ── */
-  --blue:           #1C6B9A;      /* Ocean Blue — links, badges, highlights */
-  --blue-dark:      #145078;      /* hover on blue */
-  --blue-light:     #E3EFF7;      /* blue tint surfaces */
+  /* ── Teal-blue (accent) — sampled from logo end / "ht" letters ── */
+  --blue:           #0E5C73;
+  --blue-dark:      #094252;
+  --blue-light:     #E1ECF5;
 
   /* ── Supporting tones ── */
-  --mint:           #5CC48A;      /* lighter green — hover fills, icons */
-  --teal-mid:       #2E9E8A;      /* mid teal — gradient midpoint */
-  --sky:            #3A8FC4;      /* sky blue — softer blue uses */
+  --mint:           #5FC07A;
+  --teal-mid:       #2B8C68;
+  --sky:            #3A8FC4;
 
-  /* ── Logo gradient ── */
-  --gradient-logo: linear-gradient(135deg, #3DB05C, #1A7A6E, #1C6B9A);
-  --primary-gradient: linear-gradient(90deg, #6eb84f 0%, #05697a 100%);
+  /* ── Logo gradient — matches the actual wordmark ── */
+  --gradient-logo: linear-gradient(90deg, #3FA34D, #1B7A6E, #0E5C73);
+  --primary-gradient: linear-gradient(135deg, #3FA34D, #1B7A6E);
 
   /* ── Borders ── */
-  --line:           #E2E8E6;      /* default border */
-  --line-strong:    #C8D4D0;      /* hover / emphasis border */
+  --line:           #E1E9E4;
+  --line-strong:    #C6D4CC;
 
   /* ── Category wayfinding ── */
-  --cat-tadabbur:        #1A7A6E;    /* deep teal */
-  --cat-ahkaam:         #2E9E5B;    /* forest green */
-  --cat-siyar:     #1C6B9A;    /* ocean blue */
-  --cat-globalaffairs:      #4A4A4A;    /* ink soft */
-   --cat-meetthescholar:      #4A4A4A;    /* ink soft */
-    --cat-reflection:      #4A4A4A;    /* ink soft */
-     --cat-:      #4A4A4A;    /* ink soft */
-  --cat-kurippathukal:#5CC48A;    /* mint */
+  --cat-tadabbur:       #1B7A6E;
+  --cat-ahkaam:         #3FA34D;
+  --cat-siyar:          #0E5C73;
+  --cat-globalaffairs:  #4A4A4A;
+  --cat-meetthescholar: #2B8C68;
+  --cat-reflection:     #5FC07A;
+  --cat-bookshelf:      #0F5249;
+  --cat-kurippathukal:  #5FC07A;
 
   /* ── Type ── */
   --font-base:    "Noto Sans", "Noto Sans Malayalam", -apple-system, "Segoe UI", sans-serif;
@@ -66,7 +63,6 @@
   --ease:          cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-  
 /* ---------- Reset ---------- */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -125,17 +121,23 @@ p { margin: 0; }
   display: inline-block;
 }
 
-.eyebrow.cat-quran::before         { background: var(--cat-quran); }
-.eyebrow.cat-fiqh::before          { background: var(--cat-fiqh); }
-.eyebrow.cat-thareekh::before      { background: var(--cat-thareekh); }
-.eyebrow.cat-general::before       { background: var(--cat-general); }
-.eyebrow.cat-kurippathukal::before { background: var(--cat-kurippathukal); }
+.eyebrow.cat-tadabbur::before        { background: var(--cat-tadabbur); }
+.eyebrow.cat-ahkaam::before          { background: var(--cat-ahkaam); }
+.eyebrow.cat-siyar::before           { background: var(--cat-siyar); }
+.eyebrow.cat-globalaffairs::before   { background: var(--cat-globalaffairs); }
+.eyebrow.cat-meetthescholar::before  { background: var(--cat-meetthescholar); }
+.eyebrow.cat-reflection::before      { background: var(--cat-reflection); }
+.eyebrow.cat-bookshelf::before       { background: var(--cat-bookshelf); }
+.eyebrow.cat-kurippathukal::before   { background: var(--cat-kurippathukal); }
 
-.eyebrow.cat-quran         { color: var(--cat-quran); }
-.eyebrow.cat-fiqh          { color: var(--cat-fiqh); }
-.eyebrow.cat-thareekh      { color: var(--cat-thareekh); }
-.eyebrow.cat-general       { color: var(--cat-general); }
-.eyebrow.cat-kurippathukal { color: #3a9a70; }
+.eyebrow.cat-tadabbur        { color: var(--cat-tadabbur); }
+.eyebrow.cat-ahkaam          { color: var(--cat-ahkaam); }
+.eyebrow.cat-siyar           { color: var(--cat-siyar); }
+.eyebrow.cat-globalaffairs   { color: var(--cat-globalaffairs); }
+.eyebrow.cat-meetthescholar  { color: var(--cat-meetthescholar); }
+.eyebrow.cat-reflection      { color: var(--cat-reflection); }
+.eyebrow.cat-bookshelf       { color: var(--cat-bookshelf); }
+.eyebrow.cat-kurippathukal   { color: #2D7A3A; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -189,9 +191,9 @@ p { margin: 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(248,250,251,.96);
+  background: rgba(247, 250, 247, 0.96);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #9FD4CC;
+  border-bottom: 1px solid var(--line-strong);
 }
 .navbar {
   display: flex;
@@ -216,7 +218,7 @@ p { margin: 0; }
   font-size: 1.15rem;
   letter-spacing: -0.01em;
 
-  background: linear-gradient(90deg, #6eb84f 0%, #05697a 100%);
+  background: var(--gradient-logo);
   background-clip: text;
   -webkit-background-clip: text;
 
@@ -268,11 +270,11 @@ p { margin: 0; }
 
 /* Navbar CTA button override */
 .navbar .btn-primary {
-  background: var(--teal);
+  background: linear-gradient(135deg, var(--leaf), var(--teal));
   color: #fff;
 }
 .navbar .btn-primary:hover {
-  background: var(--teal-dark);
+  opacity: 0.9;
 }
 
 @media (max-width: 860px) {
@@ -281,12 +283,12 @@ p { margin: 0; }
     top: 65px;
     left: 0;
     right: 0;
-    background: #E0F2F0;
+    background: var(--teal-light);
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
     padding: 16px 24px 24px;
-    border-bottom: 1px solid #9FD4CC;
+    border-bottom: 1px solid var(--line-strong);
     box-shadow: var(--shadow-raised);
     transform: translateY(-12px);
     opacity: 0;
@@ -304,7 +306,27 @@ p { margin: 0; }
   }
   .navbar__toggle { display: inline-flex; }
 }
+/* ── Navbar contact button + actions wrapper ── */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
 
+.navbar__contact-btn {
+  font-size: 0.88rem;
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Hide contact button on mobile — show it inside the open menu instead */
+@media (max-width: 860px) {
+  .navbar__contact-btn {
+    display: none;
+  }
+}
 /* ==========================================================================
    FOOTER
    ========================================================================== */
@@ -334,7 +356,7 @@ p { margin: 0; }
   color: #fff;
 }
 .footer__tagline {
-  color: #A8D8D4;
+  color: #A8DCD2;
   font-size: 0.92rem;
   max-width: 320px;
 }
@@ -343,12 +365,12 @@ p { margin: 0; }
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #7FC8C2;
+  color: #7FC4B8;
   margin-bottom: 16px;
 }
 .footer__links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
 .footer__links a {
-  color: #C2E8E4;
+  color: #C2E8DE;
   font-size: 0.92rem;
   transition: color 0.15s var(--ease);
 }
@@ -381,7 +403,7 @@ p { margin: 0; }
   flex-wrap: wrap;
   gap: 8px;
   font-size: 0.82rem;
-  color: #7FC8C2;
+  color: #7FC4B8;
 }
 
 /* ── Brand column ── */
@@ -405,7 +427,7 @@ p { margin: 0; }
 }
 .footer__brand-subline {
   font-size: 0.72rem;
-  color: #7FC8C2;
+  color: #7FC4B8;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin-top: 2px;
@@ -417,7 +439,7 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #C2E8E4;
+  color: #C2E8DE;
   font-size: 0.92rem;
   transition: color 0.15s var(--ease);
 }
@@ -519,7 +541,7 @@ p { margin: 0; }
 .form-field textarea:focus,
 .form-field select:focus {
   border-color: var(--leaf);
-  box-shadow: 0 0 0 3px rgba(46, 158, 91, 0.15);
+  box-shadow: 0 0 0 3px rgba(63, 163, 77, 0.15);
   outline: none;
 }
 .form-status {
@@ -630,7 +652,7 @@ p { margin: 0; }
 .hero {
   border-bottom: 1px solid var(--line);
   background:
-    radial-gradient(circle at 85% 20%, rgba(46, 158, 91, 0.07), transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(63, 163, 77, 0.07), transparent 55%),
     var(--paper);
 }
 .hero__inner {
@@ -1021,44 +1043,10 @@ p { margin: 0; }
   from { opacity: 0; transform: scale(0.8); }
   to   { opacity: 1; transform: scale(1); }
 }
+
 /* ==========================================================================
    CONTACT PAGE — redesigned
    ========================================================================== */
-   .contact-social-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.contact-social-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 14px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  background: var(--paper-raised);
-  color: var(--ink-soft);           /* ← this sets SVG stroke colour */
-  font-size: 0.82rem;
-  font-weight: 500;
-  font-family: inherit;
-  text-decoration: none;            /* ← removes underline on <a> */
-  cursor: pointer;
-  transition: all 0.15s var(--ease);
-  line-height: 1;                   /* ← stops text/icon misalignment */
-}
-
-.contact-social-btn svg {
-  flex-shrink: 0;
-  display: block;
-}
-
-.contact-social-btn:hover {
-  border-color: var(--teal);
-  color: var(--teal-dark);
-  background: var(--teal-light);
-}
-
 .contact-divider {
   width: 44px;
   height: 3px;
@@ -1096,12 +1084,13 @@ p { margin: 0; }
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 16px 18px;
-  transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.15s var(--ease);
 }
 
 .contact-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
   border-color: var(--teal);
-  box-shadow: var(--shadow-card);
 }
 
 .cic-icon {
@@ -1114,6 +1103,11 @@ p { margin: 0; }
   justify-content: center;
   flex-shrink: 0;
   color: var(--teal-dark);
+  transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover .cic-icon {
+  transform: scale(1.08);
 }
 
 .cic-label {
@@ -1186,8 +1180,14 @@ a.cic-value:hover { color: var(--teal); }
   font-weight: 500;
   font-family: inherit;
   text-decoration: none;
-  transition: all 0.15s var(--ease);
   cursor: pointer;
+  transition: all 0.15s var(--ease);
+  line-height: 1;
+}
+
+.contact-social-btn svg {
+  flex-shrink: 0;
+  display: block;
 }
 
 .contact-social-btn:hover {
@@ -1263,7 +1263,7 @@ a.cic-value:hover { color: var(--teal); }
 .cf-group textarea:focus,
 .cf-group select:focus {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(26, 122, 110, 0.12);
+  box-shadow: 0 0 0 3px rgba(27, 122, 110, 0.12);
   outline: none;
 }
 
@@ -1394,27 +1394,6 @@ a.cic-value:hover { color: var(--teal); }
   fill: none;
   stroke: currentColor;
 }
-/* ==========================================================================
-   CONTACT INFO CARD HOVER EFFECTS
-   ========================================================================== */
-
-
-.contact-info-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-info-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-}
-
-.contact-info-card:hover .cic-icon {
-  transform: scale(1.08);
-}
-
-.cic-icon {
-  transition: transform 0.3s ease;
-}
 
 /* ==========================================================================
    HOME PAGE — mobile card size fix
@@ -1426,38 +1405,32 @@ a.cic-value:hover { color: var(--teal); }
     gap: 12px;
   }
 
-  /* shorter images on all mosaic cards */
   .mosaic .card__media {
     aspect-ratio: 16 / 7;
   }
 
-  /* lead card slightly taller than others */
   .mosaic .card--lead .card__media {
     aspect-ratio: 16 / 8;
   }
 
-  /* smaller title on lead card */
   .mosaic .card--lead .card__title {
     font-size: 1.05rem;
   }
 
-.mosaic .card__excerpt {
+  .mosaic .card__excerpt {
     display: -webkit-box;
-    -webkit-line-clamp: 2;   /* Show only 2 lines */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-
     font-size: 0.82rem;
     line-height: 1.4;
-}
+  }
 
-  /* hide cards 9 and beyond — too many on one screen */
   .mosaic .card:nth-child(n+9) {
     display: none;
   }
 
-  /* tighter card body padding */
   .mosaic .card__body {
     padding: 12px 14px 14px;
     gap: 6px;
@@ -1467,7 +1440,6 @@ a.cic-value:hover { color: var(--teal); }
   .post-grid .card__media {
     aspect-ratio: 16 / 7;
   }
-
 
   .post-grid .card__body {
     padding: 12px 14px 14px;
